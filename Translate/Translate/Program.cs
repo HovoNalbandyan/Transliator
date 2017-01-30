@@ -11,13 +11,13 @@ namespace Translate
     {
         static void Main(string[] args)
         {
-            string text = System.IO.File.ReadAllText(@"‪C:\Users\Hovhannes\Desktop\input.txt");
+            //string text = System.IO.File.ReadAllText(@"‪C:\Users\Hovhannes\Desktop\input.txt");
             
 
-
-           /* Console.WriteLine("Մուտքագրել Լատինատառ Բառ");
+       
+            Console.WriteLine("Մուտքագրել Լատինատառ Բառ");
             Console.WriteLine(  );
-            Console.Write("Լատինատառ" + "  ");*/
+            Console.Write("Լատինատառ" + "  ");
 
             string str = "աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցուփքևօֆ";
 
@@ -67,39 +67,39 @@ namespace Translate
 
             string a = Console.ReadLine();
             string newstr = "";
-            //for (int i = 0; i < a.Length; i++)
-            //{
-            //    if (i != a.Length - 1)
-            //    {
-            //        if (a[i] == 's' && a[i + 1] == 'h') newstr = newstr + lettercollection["sh"];
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (i != a.Length - 1)
+                {
+                    if (a[i] == 's' && a[i + 1] == 'h') newstr = newstr + lettercollection["sh"];
 
-            //        else if (a[i] == 'g' && a[i + 1] == 'h') newstr = newstr + lettercollection["gh"];
+                    else if (a[i] == 'g' && a[i + 1] == 'h') newstr = newstr + lettercollection["gh"];
 
-            //        else if (a[i] == 'j' && a[i + 1] == 'h') newstr = newstr + lettercollection["jh"];
+                    else if (a[i] == 'j' && a[i + 1] == 'h') newstr = newstr + lettercollection["jh"];
 
-            //        else if (a[i] == 'e' && a[i + 1] == 'v') newstr = newstr + lettercollection["ev"];
+                    else if (a[i] == 'e' && a[i + 1] == 'v') newstr = newstr + lettercollection["ev"];
 
-            //        else if (a[i] == 'd' && a[i + 1] == 'z') newstr = newstr + lettercollection["dz"];
+                    else if (a[i] == 'd' && a[i + 1] == 'z') newstr = newstr + lettercollection["dz"];
 
-            //        else if (a[i] == 'k' && a[i + 1] == 'h') newstr = newstr + lettercollection["kh"];
+                    else if (a[i] == 'k' && a[i + 1] == 'h') newstr = newstr + lettercollection["kh"];
 
-            //        else if (a[i] == 'c' && a[i + 1] == 'h') newstr = newstr + lettercollection["ch"];
-            //    }
-            //    newstr = newstr + lettercollection[a[i].ToString()];
-            //}
+                    else if (a[i] == 'c' && a[i + 1] == 'h') newstr = newstr + lettercollection["ch"];
+                }
+                newstr = newstr + lettercollection[a[i].ToString()];
+            }
             foreach (var item in lettercollection)
             {
                 a = a.Replace(item.Key, item.Value);
             }
 
-            System.IO.File.WriteAllText(@"‪C:\Users\Hovhannes\Desktop\output.txt", a);
+            //System.IO.File.WriteAllText(@"‪C:\Users\Hovhannes\Desktop\output.txt", a);
 
-            /*   Console.Write("Հայատառ"+"  ");
-               Console.WriteLine(a);
+               Console.Write("Հայատառ"+"  ");
+               //Console.WriteLine(a);
                Console.WriteLine(newstr);
                Console.ReadKey();
 
-            */
+            
 
 
 
