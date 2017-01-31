@@ -19,16 +19,15 @@ namespace Translate
             string str1 = "abcdefghjklmnopqrstuvwxyz";
             Dictionary<string, string> lettercollection = new Dictionary<string, string>();
             //lettercollection.Add("b", "է");
-            //lettercollection.Add("dz", "ձ");
-            //lettercollection.Add("ev", "և");
-            ////lettercollection.Add("r", "ր");
-            //lettercollection.Add("ch", "չ");
-            ////lettercollection.Add("ch", "ճ");
-            //lettercollection.Add("jh", "ժ");
-            //lettercollection.Add("gh", "ղ");
-            //lettercollection.Add("sh", "շ");
-            //lettercollection.Add(":)", "\u263A");
-            //lettercollection.Add("kh", "խ");
+            lettercollection.Add("dz", "ձ");
+            lettercollection.Add("ev", "և");
+            lettercollection.Add("ch", "չ");
+            //lettercollection.Add("ch", "ճ");
+            lettercollection.Add("jh", "ժ");
+            lettercollection.Add("gh", "ղ");
+            lettercollection.Add("sh", "շ");
+            lettercollection.Add(":)", "\u263A");
+            lettercollection.Add("kh", "խ");
 
             lettercollection.Add("a", "ա"); lettercollection.Add("A", "Ա");
             lettercollection.Add("b", "բ"); lettercollection.Add("B", "Բ");
@@ -64,19 +63,19 @@ namespace Translate
             {
                 if (i != a.Length - 1)
                 {
-                    if (a[i] == 's' && a[i + 1] == 'h') newstr = newstr + lettercollection["sh"];
-
-                    else if (a[i] == 'g' && a[i + 1] == 'h') newstr = newstr + lettercollection["gh"];
-
-                    else if (a[i] == 'j' && a[i + 1] == 'h') newstr = newstr + lettercollection["jh"];
-
-                    else if (a[i] == 'e' && a[i + 1] == 'v') newstr = newstr + lettercollection["ev"];
-
-                    else if (a[i] == 'd' && a[i + 1] == 'z') newstr = newstr + lettercollection["dz"];
-
-                    else if (a[i] == 'k' && a[i + 1] == 'h') newstr = newstr + lettercollection["kh"];
-
-                    else if (a[i] == 'c' && a[i + 1] == 'h') newstr = newstr + lettercollection["ch"];
+                    if (a[i] == 's' && a[i + 1] == 'h') { newstr = newstr + lettercollection["sh"]; i++; }
+                    else
+                    if (a[i] == 'g' && a[i + 1] == 'h') { newstr = newstr + lettercollection["gh"]; i++; }
+                    else
+                        if (a[i] == 'j' && a[i + 1] == 'h') { newstr = newstr + lettercollection["jh"]; i++; }
+                    else
+                        if (a[i] == 'e' && a[i + 1] == 'v') { newstr = newstr + lettercollection["ev"]; i++; }
+                    else
+                        if (a[i] == 'd' && a[i + 1] == 'z') { newstr = newstr + lettercollection["dz"]; i++; }
+                    else
+                        if (a[i] == 'k' && a[i + 1] == 'h') { newstr = newstr + lettercollection["kh"]; i++; }
+                    else
+                        if (a[i] == 'c' && a[i + 1] == 'h') { i++; newstr = newstr + lettercollection["ch"]; i++; }
                 }
                 newstr = newstr + lettercollection[a[i].ToString()];
             }
@@ -90,7 +89,7 @@ namespace Translate
             //Console.WriteLine(a);
             Console.WriteLine(newstr);
             Console.ReadKey();
-            //91669003
+            //1669003
 
 
             GC.Collect();
