@@ -12,59 +12,52 @@ namespace Translate
         static void Main(string[] args)
         {
             //string text = System.IO.File.ReadAllText(@"‪C:\Users\Hovhannes\Desktop\input.txt");
-            
-
-       
             Console.WriteLine("Մուտքագրել Լատինատառ Բառ");
-            Console.WriteLine(  );
+            Console.WriteLine();
             Console.Write("Լատինատառ" + "  ");
-
             string str = "աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցուփքևօֆ";
-
             string str1 = "abcdefghjklmnopqrstuvwxyz";
             Dictionary<string, string> lettercollection = new Dictionary<string, string>();
-
             //lettercollection.Add("b", "է");
-            lettercollection.Add("dz", "ձ");
-            lettercollection.Add("ev", "և");
-            //lettercollection.Add("r", "ր");
-            lettercollection.Add("ch", "չ");
-            //lettercollection.Add("ch", "ճ");
-            lettercollection.Add("jh", "ժ");
-            lettercollection.Add("gh", "ղ");
-            lettercollection.Add("sh", "շ");
-            lettercollection.Add(":)", "\u263A");
-            lettercollection.Add("kh", "խ");
+            //lettercollection.Add("dz", "ձ");
+            //lettercollection.Add("ev", "և");
+            ////lettercollection.Add("r", "ր");
+            //lettercollection.Add("ch", "չ");
+            ////lettercollection.Add("ch", "ճ");
+            //lettercollection.Add("jh", "ժ");
+            //lettercollection.Add("gh", "ղ");
+            //lettercollection.Add("sh", "շ");
+            //lettercollection.Add(":)", "\u263A");
+            //lettercollection.Add("kh", "խ");
 
-            lettercollection.Add("a", "ա");
-            lettercollection.Add("b", "բ");
-            lettercollection.Add("c", "ց");
-            lettercollection.Add("d", "դ");
-            lettercollection.Add("e", "ե");
-            lettercollection.Add("f", "ֆ");
-            lettercollection.Add("g", "գ");
-            lettercollection.Add("h", "հ");
-            lettercollection.Add("i", "ի");
-            lettercollection.Add("j", "ջ");
-            lettercollection.Add("k", "կ");
-            lettercollection.Add("l", "լ");
-            lettercollection.Add("m", "մ");
-            lettercollection.Add("n", "ն");
-            lettercollection.Add("o", "օ");
-            lettercollection.Add("p", "պ");
-            lettercollection.Add("q", "ք");
-            lettercollection.Add("r", "ռ");
-            lettercollection.Add("s", "ս");
-            lettercollection.Add("t", "տ");
-            lettercollection.Add("u", "ու");
-            lettercollection.Add("v", "վ");
-            lettercollection.Add("w", "ո");
-            lettercollection.Add("x", "խ");
-            lettercollection.Add("y", "յ");
-            lettercollection.Add("z", "զ");
-            lettercollection.Add("@", "ը");
+            lettercollection.Add("a", "ա"); lettercollection.Add("A", "Ա");
+            lettercollection.Add("b", "բ"); lettercollection.Add("B", "Բ");
+            lettercollection.Add("c", "ց"); lettercollection.Add("C", "Ց");
+            lettercollection.Add("d", "դ"); lettercollection.Add("D", "Դ");
+            lettercollection.Add("e", "ե"); lettercollection.Add("E", "Ե");
+            lettercollection.Add("f", "ֆ"); lettercollection.Add("F", "Ֆ");
+            lettercollection.Add("g", "գ"); lettercollection.Add("G", "Գ");
+            lettercollection.Add("h", "հ"); lettercollection.Add("H", "Հ");
+            lettercollection.Add("i", "ի"); lettercollection.Add("I", "Ի");
+            lettercollection.Add("j", "ջ"); lettercollection.Add("J", "Ջ");
+            lettercollection.Add("k", "կ"); lettercollection.Add("K", "Կ");
+            lettercollection.Add("l", "լ"); lettercollection.Add("L", "Լ");
+            lettercollection.Add("m", "մ"); lettercollection.Add("M", "Մ");
+            lettercollection.Add("n", "ն"); lettercollection.Add("N", "Ն");
+            lettercollection.Add("o", "օ"); lettercollection.Add("O", "Օ");
+            lettercollection.Add("p", "պ"); lettercollection.Add("P", "Պ");
+            lettercollection.Add("q", "ք"); lettercollection.Add("Q", "Ք");
+            lettercollection.Add("r", "ռ"); lettercollection.Add("R", "Ռ");
+            lettercollection.Add("s", "ս"); lettercollection.Add("S", "Ս");
+            lettercollection.Add("t", "տ"); lettercollection.Add("T", "Տ");
+            lettercollection.Add("u", "ու"); lettercollection.Add("U", "ՈՒ");
+            lettercollection.Add("v", "վ"); lettercollection.Add("V", "Վ");
+            lettercollection.Add("w", "ո"); lettercollection.Add("W", "Ո");
+            lettercollection.Add("x", "խ"); lettercollection.Add("X", "Խ");
+            lettercollection.Add("y", "յ"); lettercollection.Add("Y", "Յ");
+            lettercollection.Add("z", "զ"); lettercollection.Add("Z", "Զ");
+            lettercollection.Add("@", "ը"); 
             lettercollection.Add(" ", " ");
-
             string a = Console.ReadLine();
             string newstr = "";
             for (int i = 0; i < a.Length; i++)
@@ -93,14 +86,14 @@ namespace Translate
             }
 
             //System.IO.File.WriteAllText(@"‪C:\Users\Hovhannes\Desktop\output.txt", a);
+            Console.Write("Հայատառ" + "  ");
+            //Console.WriteLine(a);
+            Console.WriteLine(newstr);
+            Console.ReadKey();
+            //91669003
 
-               Console.Write("Հայատառ"+"  ");
-               //Console.WriteLine(a);
-               Console.WriteLine(newstr);
-               Console.ReadKey();
 
-            
-
+            GC.Collect();
 
 
         }
