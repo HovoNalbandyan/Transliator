@@ -63,19 +63,19 @@ namespace Translate
             {
                 if (i != a.Length - 1)
                 {
-                    if (a[i] == 's' && a[i + 1] == 'h') { newstr = newstr + lettercollection["sh"]; i++; }
+                    if (a[i] == 's' && a[i + 1] == 'h') { newstr = newstr + lettercollection["sh"]; ++i; }
                     else
-                    if (a[i] == 'g' && a[i + 1] == 'h') { newstr = newstr + lettercollection["gh"]; i++; }
+                    if (a[i] == 'g' && a[i + 1] == 'h') { newstr = newstr + lettercollection["gh"]; ++i; }
                     else
-                        if (a[i] == 'j' && a[i + 1] == 'h') { newstr = newstr + lettercollection["jh"]; i++; }
+                        if (a[i] == 'j' && a[i + 1] == 'h') { newstr = newstr + lettercollection["jh"]; ++i; }
                     else
-                        if (a[i] == 'e' && a[i + 1] == 'v') { newstr = newstr + lettercollection["ev"]; i++; }
+                        if (a[i] == 'e' && a[i + 1] == 'v') { newstr = newstr + lettercollection["ev"]; ++i; }
                     else
-                        if (a[i] == 'd' && a[i + 1] == 'z') { newstr = newstr + lettercollection["dz"]; i++; }
+                        if (a[i] == 'd' && a[i + 1] == 'z') { newstr = newstr + lettercollection["dz"]; ++i; }
                     else
-                        if (a[i] == 'k' && a[i + 1] == 'h') { newstr = newstr + lettercollection["kh"]; i++; }
+                        if (a[i] == 'k' && a[i + 1] == 'h') { newstr = newstr + lettercollection["kh"]; ++i; }
                     else
-                        if (a[i] == 'c' && a[i + 1] == 'h') { i++; newstr = newstr + lettercollection["ch"]; i++; }
+                        if (a[i] == 'c' && a[i + 1] == 'h') { i++; newstr = newstr + lettercollection["ch"]; ++i; }
                 }
                 newstr = newstr + lettercollection[a[i].ToString()];
             }
@@ -92,7 +92,19 @@ namespace Translate
             //1669003
 
 
-            GC.Collect();
+            //GC.Collect();
+            //int i;
+            //int j = 10;
+            //for (i = 0, Console.WriteLine("Start: {0}", i); i < j; i++, j--, Console.WriteLine("i={0}, j={1}", i, j))
+            //{
+            //    // Body of the loop.
+            //}
+            //int f = 2;
+            //float c = 8.0f;
+            //bool b=true;
+            //if (f<c)
+            //    Console.WriteLine(b);
+
 
 
         }
