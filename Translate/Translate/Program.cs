@@ -84,7 +84,6 @@ namespace Translate
             {
                 a = a.Replace(item.Key, item.Value);
             }
-
             //System.IO.File.WriteAllText(@"‪C:\Users\Hovhannes\Desktop\output.txt", a);
             Console.Write("Հայատառ" + "  ");
             //Console.WriteLine(a);
